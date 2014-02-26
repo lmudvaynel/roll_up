@@ -37,11 +37,17 @@ ru:
          many: Страниц
          other: Страницы
        layout:
-           zero: Шаблонов
-           one: Шаблон
-           few: Шаблоны
-           many: Шаблонов
-           other: Шаблоны  
+          zero: Шаблонов
+          one: Шаблон
+          few: Шаблоны
+          many: Шаблонов
+          other: Шаблоны 
+       order:
+          zero: Заказов
+          one: Заказ
+          few: Заказов
+          many: Заказов
+          other: Заказы
        seo:
          СЕО
      attributes:
@@ -81,6 +87,12 @@ ru:
          position: Позиция
          slug: Псевдоним
          updated_at: Дата обновления
+       order:
+          name: Имя
+          company: Компания
+          phone: Номер телефона
+          content: Описание заказа
+          email: E-Mail
        seo:
          title: Заголовок
          keywords: Ключевые слова

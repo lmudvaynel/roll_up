@@ -1,11 +1,16 @@
 <% provide(:title, @page.name) %>
 
-<% order = @order || Order.new %>
+<div class="wrapper">
+  <div class="row-fluid content">
+    <%= raw @page.content %>
+  </div>
+</div>
 
+<% order = @order || Order.new %>
 <div>
 <%= form_for(order) do |f| %>
-  <div>
-  	<%= render 'shared/error_messages', object: f.object %>
+<%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
   	<%= f.text_field :name, placeholder: "Ваше имя" %>
   	<%= f.text_field :company, placeholder: "Компания" %>
   	<%= f.text_field :phone, placeholder: "Телефон" %>

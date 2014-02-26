@@ -9,6 +9,13 @@ $(document).ready(function(){
 		else { $('.wrapper').css({'margin-top':'0px'});}
 	});
 
+	$(".gallery_1 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
+	$(".gallery_2 a[rel^='prettyPhoto']").prettyPhoto({slideshow:5000, autoplay_slideshow:true});
+	$(".gallery_3 a[rel^='prettyPhoto']").prettyPhoto({slideshow:5000, autoplay_slideshow:true});
+	$(".gallery_4 a[rel^='prettyPhoto']").prettyPhoto({slideshow:5000, autoplay_slideshow:true});
+
+
+
 	$(".column").mouseenter(function(){
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name")

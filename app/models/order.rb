@@ -5,5 +5,4 @@ class Order < ActiveRecord::Base
   validates :phone, presence: true
   validates :content, presence: true
   validates :email, presence: true
-  validates :company, presence: true
 end
