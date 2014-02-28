@@ -9,7 +9,7 @@ $(document).ready(function(){
 	$(".column").mouseenter(function(){
 		$(this).find(".more").removeClass('hidden')
 		$(this).addClass("current");
-		$(this).find(".stand_name").addClass("current_name")
+		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({
 			},500);
 		$(this).find(".stand_name").stop().animate({
@@ -18,8 +18,9 @@ $(document).ready(function(){
 			},500);
 			
 	}).mouseleave(function(){
-		$(this).removeClass("current")
-		$(this).find(".more").addClass('hidden')
+		$(this).removeClass("current");
+		$(this).find(".stand_name").removeClass("current_name");
+		$(this).find(".more").addClass('hidden');
 		$(this).stop().animate({
 		},500);
 		if ($(this).hasClass("no_border") ) {
@@ -28,8 +29,6 @@ $(document).ready(function(){
 		$(this).find(".stand_name").stop().animate({
 			backgroundColor: "#fff",
 			color: "#949597",
-		},500, function() {
-			$(this).find(".stand_name").removeClass("current_name");
-		});
+		},500);
 	});
 });
