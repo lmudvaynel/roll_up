@@ -1,6 +1,6 @@
 # encoding: utf-8
 class OrderMailer < ActionMailer::Base
-  default from: "noreply@me31.ru"
+  default from: "noreply@standee.ru"
 
   def order_mail(order)
   	@order = order
