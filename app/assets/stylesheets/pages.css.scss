@@ -45,6 +45,7 @@ $short-sprite-dimensions: true;
 	float: left;
 	width: 297px;
 	padding: 0px 15px;
+	text-transform: uppercase;
 	line-height: 28px;
 	border-left: 5px solid #cb272e;
 	margin-top: 40px;
@@ -74,6 +75,7 @@ $short-sprite-dimensions: true;
 .footer {
 	overflow: hidden;
 	clear: both;
+	margin-top: 10px;
 }
 .stlogo {
 	background: url(../assets/stlogo.png);
@@ -227,6 +229,9 @@ a.button:active  {
 .current {
 	box-shadow: inset 0px 0px 0px 3px #cb272e;
 }
+.current_name {
+	text-align: center;
+}
 .main_content {
 	clear:both
 }
@@ -257,22 +262,18 @@ a.button:active  {
 }
 /* forms */
 
-input, textarea, select, .uneditable-input {
+.input_order{
   border: 1px solid #bbb;
-  width: 100%;
+  width:488px;
   padding: 3px;
   margin-bottom: 6px;
  /* @include box_sizing; */
- 
-  textarea {
-  	height: 150px;
-  	resize: vertical;
  }
-}
-
-input {
-  height: auto !important;
-  width:488px;
+ textarea {
+  height: 150px;
+  width:100%;
+  resize: vertical;
+ 
 }
 
 #error_explanation {
@@ -287,6 +288,10 @@ input {
 	bottom: 10px;
 	text-align: center;
 	visibility:hidden;
+}
+
+.alert {
+margin-bottom: 0px;
 }
 
 
