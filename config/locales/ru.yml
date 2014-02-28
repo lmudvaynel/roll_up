@@ -48,6 +48,12 @@ ru:
           few: Заказов
           many: Заказов
           other: Заказы
+       comment:
+          zero: Комментариев
+          one: Комментарий
+          few: Комментариев
+          many: Комментариев
+          other: Комментарии
        seo:
          СЕО
      attributes:
