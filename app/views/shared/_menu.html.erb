@@ -2,9 +2,7 @@
 	<ul>
 		<% Page.visible.each do |stand| %>
 				<li class="menu_item <%= menu_item_state(stand)%>">
-					<ul class="nested_links hidden">
 					<%= link_to content_tag(:span, stand.name), page_slug_path(stand) %>  
-					<ul>
 				</li>
 		<% end %>
 	</ul>

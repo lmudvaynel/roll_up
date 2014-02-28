@@ -1,9 +1,7 @@
 <% provide(:title, @page.name) %>
 
 <div class="wrapper">
-  <div class="row-fluid content">
-    <%= raw @page.content %>
-  </div>
+  <%= raw @page.content %>
 </div>
 
 <% order = @order || Order.new %>

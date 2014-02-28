@@ -73,6 +73,7 @@ $short-sprite-dimensions: true;
 
 .footer {
 	overflow: hidden;
+	clear: both;
 }
 .stlogo {
 	background: url(../assets/stlogo.png);
@@ -121,7 +122,7 @@ $short-sprite-dimensions: true;
 	border-bottom: 1px dashed #fff;
 }
 .block {
-	height: 900px;
+	height: 800px;
 	position: relative;
 	float: left;
 	width: 196px;
@@ -162,7 +163,18 @@ $short-sprite-dimensions: true;
 }
 .order {
 	text-align: center;
-	margin-top: 30px;
+	padding-bottom: 5px;
+}
+.more {
+	text-align: center;
+	margin-bottom: 5px;
+}
+.more_info {
+	color: #cb272e;
+}
+.more_nfo, .more_info:hover, .more_info:active {
+	color: #cb272e;
+	text-decoration: none;
 }
 .button {
 	border-radius: 200px;
@@ -221,7 +233,7 @@ a.button:active  {
 
 .thumb {
 	position: absolute;
-	bottom: 120px;
+	bottom: 20px;
 	height: 20%;
 	right: 0;
 	left: 0;
@@ -268,11 +280,9 @@ input {
     margin: 0 0 18px 0;
   }
 }
-.gallery li{
-	height: 102px;
-	width: 100%;
+.gallery li {
 	overflow: hidden;
-	position: absolute;
 	bottom: 10px;
 	text-align: center;
+	visibility:hidden;
 }
