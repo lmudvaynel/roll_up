@@ -165,10 +165,6 @@ $short-sprite-dimensions: true;
 	text-align: center;
 	padding-bottom: 5px;
 }
-.more {
-	text-align: center;
-	margin-bottom: 5px;
-}
 .more_info {
 	color: #cb272e;
 }
@@ -218,6 +214,12 @@ a.button:active  {
 	background: linear-gradient(to bottom,  #c90006 0%,#d61535 49%,#c9060c 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c90006', endColorstr='#c9060c',GradientType=0 ); /* IE6-9 */
 }
+
+.more {
+	padding: 5px 22px;
+	text-align: center;
+}
+
 .wrapper {
 	width: 1252px;
 	margin: auto;
@@ -286,3 +288,5 @@ input {
 	text-align: center;
 	visibility:hidden;
 }
+
+
