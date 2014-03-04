@@ -7,7 +7,6 @@ $(document).ready(function(){
 	$(".gallery_5 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 
 	$(".column").mouseenter(function(){
-		$(this).find(".more").removeClass('hidden')
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({
@@ -20,7 +19,6 @@ $(document).ready(function(){
 	}).mouseleave(function(){
 		$(this).removeClass("current");
 		$(this).find(".stand_name").removeClass("current_name");
-		$(this).find(".more").addClass('hidden');
 		$(this).stop().animate({
 		},500);
 		if ($(this).hasClass("no_border") ) {

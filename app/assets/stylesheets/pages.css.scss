@@ -1,5 +1,26 @@
 @import "bootstrap";
 @import "compass";
+
+/*- Шрифты */
+
+@font-face {
+  font-family: CondProBold;
+  src: local("PFDinTextCondPro-Bold"),
+       url(PFDinTextCondPro-Bold.ttf);
+}
+@font-face {
+  font-family: CondProBoldItal;
+  src: local("PFDinTextCondPro-BoldItal"),
+       url(PFDinTextCondPro-BoldItal.ttf);
+}
+@font-face {
+  font-family: CondProItal;
+  src: local("PFDinTextCondPro-Italic"),
+       url(PFDinTextCondPro-Italic.ttf);
+}
+
+/*Шрифты конец*/
+
 $short-sprite-dimensions: true;
 
 .no-scroll {overflow:hidden;-webkit-overflow-scrolling: touch;}
@@ -11,13 +32,13 @@ $short-sprite-dimensions: true;
 .header {
   overflow: hidden;
   padding-top: 15px;
+  margin-bottom: -57px;
 }
 .main_content {
 	padding-top: 10px;
 }
 .site_title {
-	font-size: 48px;
-	font-weight: bold;
+	font-size: 55px;
 	color: #949597;
 	text-align: right;
 	float: left;
@@ -32,24 +53,34 @@ $short-sprite-dimensions: true;
 
 .site_name {
 	color: #949597;
+	font-family: CondProBold;
+	text-transform: uppercase;
 }
 
 .site_name:hover, .site_name:active{
 	text-decoration:none;
 	color: #949597;
+	font-family: CondProBold;
+	text-transform: uppercase;
 }
 
 }
 .head_info {
-	font-size: 26px;
+	font-size: 36px;
 	float: left;
 	width: 297px;
 	padding: 0px 15px;
 	text-transform: uppercase;
-	line-height: 28px;
+	line-height: 31px;
 	border-left: 5px solid #cb272e;
 	margin-top: 40px;
-	font-weight: bold;
+	font-family: CondProBold;
+}
+
+.head_phone {
+	font-size: 40px;
+	color: #cb272e;
+	font-family: CondProBold;
 }
 .chaplin {
 	background: url(../assets/chaplin.png) no-repeat;
@@ -159,6 +190,14 @@ $short-sprite-dimensions: true;
 	color: #cb272e;
 	float: left;
 	padding-left: 6px;
+}
+.size_price {
+	text-align: center;
+	color: #949597;
+	overflow: hidden;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 20px;
 }
 .stand_info {
 	height: 450px;
