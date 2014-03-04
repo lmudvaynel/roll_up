@@ -3,14 +3,14 @@ development:
   encoding: utf8
   database: rolls_dev
   username: root
-  password: '123'
+  password: 'root'
 
 test: &test
   adapter: mysql2
   encoding: utf8
   database: rolls_test
   username: root
-  password: '123'
+  password: 'root'
 
 production:
   adapter: mysql2

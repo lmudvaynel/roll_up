@@ -90,7 +90,6 @@ ActiveRecord::Schema.define(:version => 20140218104415) do
     t.integer  "position"
   end
 
-  add_index "pages", ["position"], :name => "index_pages_on_position"
   add_index "pages", ["seo_id"], :name => "index_pages_on_seo_id"
   add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
 
