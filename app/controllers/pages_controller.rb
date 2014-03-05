@@ -17,4 +17,8 @@ class PagesController < ApplicationController
   def controller_view_exists?(name)
     view_exists?("#{params[:controller]}/#{name}.html.erb")
   end
+
+  def layout_exists?(name)
+    view_exists?("layouts/#{name}.html.erb")
+  end
 end
