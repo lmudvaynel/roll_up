@@ -1,13 +1,16 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
 	<%= raw @page.content %>
-  <% if @page.slug!="order" or @page.slug!="index" then %>
-  	<%= @page.stand.content %>
-  	<div class="gallery gallery_1 ">
-  		<ul>
-  			<%= render @page.gallery_tops %>
-  		</ul>
- 		</div>
+  <% if @page.slug!="order" or @page.slug!="index" %>
+  	<%= @page.stand.content if !@page.stand.nil? %>
+  	
+	  	<div class="gallery gallery_1 ">
+	  		<ul>
+	  			<%= render @page.gallery_tops if !@page.gallery_tops.nil?  %>
+	  		</ul>
+	 		</div>
+
+ 		<% if @page.size_prices.count>0 %>
   	<table>
 			<thead>
 				<tr>
@@ -18,7 +21,8 @@
 			</thead>
 			<%= render @page.size_prices %>
 		</table>
-		<%= render @page.gallery_bots %>
+		<% end %>
+		<%= render @page.gallery_bots if !@page.gallery_bots.nil? %>
   <% end %>
 </div>
 
