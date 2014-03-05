@@ -1,5 +1,24 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
-  <%= raw @page.content %>
+	<%= raw @page.content %>
+  <% if @page.slug!="order" or @page.slug!="index" then %>
+  	<%= @page.stand.content %>
+  	<div class="gallery gallery_1 ">
+  		<ul>
+  			<%= render @page.gallery_tops %>
+  		</ul>
+ 		</div>
+  	<table>
+			<thead>
+				<tr>
+					<th>Наименование</th>
+					<th>Размеры</th>
+					<th>Цена</th>
+				</tr>
+			</thead>
+			<%= render @page.size_prices %>
+		</table>
+		<%= render @page.gallery_bots %>
+  <% end %>
 </div>
 

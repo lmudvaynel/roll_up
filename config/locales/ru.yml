@@ -54,6 +54,24 @@ ru:
           few: Комментариев
           many: Комментариев
           other: Комментарии
+       size_price:
+          zero: Харакетристик
+          one: Характеристика
+          few: Характеристик
+          many: Характеристик
+          other: Характеристики
+       gallery_top:
+          zero: Галерей 
+          one: изображение
+          few: Галерей
+          many: Галерей
+          other: Галерея стенда
+       gallery_bot:
+          zero: Галерей 
+          one: изображение
+          few: Галерей
+          many: Галерей
+          other: Инструкция для сборки
        seo:
          СЕО
      attributes:
@@ -93,6 +111,7 @@ ru:
          position: Позиция
          slug: Псевдоним
          updated_at: Дата обновления
+         content: Содержание
        order:
           name: Имя
           company: Компания
@@ -105,3 +124,12 @@ ru:
          description: Описание
          created_at: Дата создания
          updated_at: Дата обновления
+       size_price:
+         size: Размеры
+         price: Цена
+       stand:
+         content: Описание стенда
+       gallery_top:
+         image: Изображение
+       gallery_bot:
+         image: Изображение

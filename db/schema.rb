@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140218104415) do
+ActiveRecord::Schema.define(:version => 20140305120651) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -62,6 +62,26 @@ ActiveRecord::Schema.define(:version => 20140218104415) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "gallery_bots", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "page_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "gallery_tops", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "page_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
   create_table "layouts", :force => true do |t|
     t.string   "name"
     t.text     "content"
@@ -88,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20140218104415) do
     t.datetime "updated_at",                    :null => false
     t.integer  "seo_id"
     t.integer  "position"
+    t.integer  "stand_id"
   end
 
   add_index "pages", ["seo_id"], :name => "index_pages_on_seo_id"
@@ -99,6 +120,21 @@ ActiveRecord::Schema.define(:version => 20140218104415) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "size_prices", :force => true do |t|
+    t.string   "name"
+    t.string   "size"
+    t.string   "price"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "page_id"
+  end
+
+  create_table "stands", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

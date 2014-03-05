@@ -6,8 +6,8 @@ class PagesController < ApplicationController
   end
 
   def order
-
   end
+  
   private
 
   def view_exists?(view)

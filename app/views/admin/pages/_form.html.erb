@@ -1,13 +1,18 @@
 <%= semantic_form_for [:admin, resource] do |f| %>
   <%= f.inputs "Основное" do %>
     <%= f.input :position %>
-    <%= f.input :hidden, label: 'Скрыть пункт меню' %>
   <% end %>
 
   <%= f.inputs "Наполнение" do %>
     <%= f.input :name, input_html: {rows: 1}, label: 'Заголовок страницы' %>
     <%= f.input :slug, required: false %>
     <%= f.input :content, as: :ckeditor, label: 'Контент' %>
+  <% end %>
+
+  <%= f.inputs "Стенд" do %>
+    <%= f.semantic_fields_for :stand do |y| %>
+      <%= y.input :content, label: 'Контент' %>
+    <% end %>
   <% end %>
 
   <%= f.inputs "SEO" do %>

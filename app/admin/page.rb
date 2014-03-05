@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Page do
 	menu :priority => 0  
 	config.batch_actions = false
@@ -9,12 +10,16 @@ ActiveAdmin.register Page do
     def new
       @page = Page.new
       @page.build_seo   # без этой строки не появляется форма для seo параметров
+      @page.build_stand
     end
 
     def edit
       @page = Page.find(params[:id])
       if @page.seo_id.nil?
         @page.build_seo
+      end
+      if @page.stand_id.nil?
+        @page.build_stand
       end
     end
   end
@@ -25,8 +30,53 @@ ActiveAdmin.register Page do
 		column :name
 		column :slug
 		column :content
-		column :hidden
 		default_actions
 	end
-	form partial: 'form'
+
+	form do |f|
+	  	f.inputs "Наполнение" do
+		  	f.input :name
+		  	f.input :slug 
+			f.input :content, as: :ckeditor 
+		end  
+		f.inputs "Стенд", :for => [:stand, f.object.stand || Stand.new] do |stand|
+			stand.input :content
+		end
+		f.inputs do
+			f.has_many :gallery_tops do |p|
+	      unless p.object.new_record?
+	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
+	      end
+			  p.input :image, :as => :file, :hint => p.object.image.present? \
+	        ? image_tag(p.object.image.url(:thumb))
+	        : p.template.content_tag(:span, "Изображение отсутствует")
+	    end
+		end
+		f.inputs do
+	  	f.has_many :size_prices do |sp|
+	  		unless sp.object.new_record?
+	      	sp.input :_destroy, :as => :boolean, :label => "Удалить размеры?", :required => false
+	      end
+				sp.input :size
+				sp.input :price
+		  end
+	 	end
+		f.inputs do
+			f.has_many :gallery_bots do |p|
+	      unless p.object.new_record?
+	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
+	      end
+			  p.input :image, :as => :file, :hint => p.object.image.present? \
+	        ? image_tag(p.object.image.url(:thumb))
+	        : p.template.content_tag(:span, "Изображение отсутствует")
+	    end
+		end
+	  f.inputs "СЕО", :for => [:seo, f.object.seo || Seo.new] do |seo|
+		  seo.input :title
+		  seo.input :description
+		  seo.input :keywords
+		end
+  	f.actions
+	end
+#form partial: 'form'
 end
