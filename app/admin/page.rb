@@ -10,16 +10,12 @@ ActiveAdmin.register Page do
     def new
       @page = Page.new
       @page.build_seo   # без этой строки не появляется форма для seo параметров
-      @page.build_stand
     end
 
     def edit
       @page = Page.find(params[:id])
       if @page.seo_id.nil?
         @page.build_seo
-      end
-      if @page.stand_id.nil?
-        @page.build_stand
       end
     end
   end
