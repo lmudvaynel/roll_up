@@ -2,7 +2,7 @@
 <div class="wrapper">
 	<%= raw @page.content %>
 	<% if @page.slug!="order" or @page.slug!="index" %>
-	<% if !@page.gallery_tops.count==0 %>
+	<% if @page.gallery_tops.count>0 %>
 		<div class="gallery_6 ">
 			<ul>
 				<%= render @page.gallery_tops %>
@@ -23,7 +23,7 @@
 		<%= render @page.size_prices %>
 		</table>
 	<% end %>
-	<% if !@page.gallery_bots.count==0 %>
+	<% if @page.gallery_bots.count>0 %>
 	<h4>Инструкция по сборке </h4>
 		<div class="gallery_7 ">
 			<ul>
