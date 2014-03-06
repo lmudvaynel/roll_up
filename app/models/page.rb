@@ -1,11 +1,10 @@
 class Page < ActiveRecord::Base
   attr_accessible :slug, :hidden, :seo_id, :content, :seo_attributes, 
                   :layout, :position, :name,
-                  :stand_id, :stand_attributes, :size_prices_attributes, 
+                  :size_prices_attributes, 
                   :gallery_tops_attributes, :gallery_bots_attributes
 
   belongs_to :seo
-  belongs_to :stand
   has_many :size_prices
   has_many :gallery_tops
   has_many :gallery_bots
@@ -13,7 +12,6 @@ class Page < ActiveRecord::Base
   acts_as_list
 
   accepts_nested_attributes_for :seo, :allow_destroy => true, :reject_if => :all_blank
-  accepts_nested_attributes_for :stand, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :size_prices, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :gallery_tops, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :gallery_bots, :allow_destroy => true, :reject_if => :all_blank

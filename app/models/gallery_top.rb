@@ -4,7 +4,7 @@ class GalleryTop < ActiveRecord::Base
   belongs_to :pages
   
   has_attached_file :image,
- 										:styles => { :medium => "600x600>", :thumb => "100x100>" }
+ 					:styles => { :medium => "600x600>", :thumb => "100x100>" }
 
   validates_attachment_presence :image
   validates_attachment_content_type :image,:content_type => ['image/jpeg', 'image/jpg', 'image/png']

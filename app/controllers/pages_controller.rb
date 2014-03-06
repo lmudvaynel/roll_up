@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def show
     @page = Page.find_by_slug(params[:slug]) || Page.find(params[:slug])
     render params[:slug] if controller_view_exists?(params[:slug])
+    @i=0
   end
 
   def order

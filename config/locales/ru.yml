@@ -127,6 +127,8 @@ ru:
        size_price:
          size: Размеры
          price: Цена
+         color: Цвет
+         weight: Вес
        stand:
          content: Описание стенда
        gallery_top:

@@ -1,1 +1,4 @@
-<%=image_tag gallery_bot.image(:thumb) %>
+<% @i=@i+1 %>
+	<li class="<%="li_#@i" if @i==1%>">
+		<a href="<%=gallery_bot.image.url(:original)%>" rel="prettyPhoto[pp_gal]"><img src="<%=gallery_bot.image.url(:medium)%>" alt="Nice building" style="visibility:visible;" title="Nice building"  /></a>
+	</li>

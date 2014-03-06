@@ -1,28 +1,34 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
 	<%= raw @page.content %>
-  <% if @page.slug!="order" or @page.slug!="index" %>
-  	<%= @page.stand.content if !@page.stand.nil? %>
-  	
-	  	<div class="gallery gallery_1 ">
-	  		<ul>
-	  			<%= render @page.gallery_tops if !@page.gallery_tops.nil?  %>
-	  		</ul>
-	 		</div>
-
- 		<% if @page.size_prices.count>0 %>
-  	<table>
+	<% if @page.slug!="order" or @page.slug!="index" %>
+		<div class="gallery_6 ">
+			<ul>
+				<%= render @page.gallery_tops if !@page.gallery_tops.nil?  %>
+			</ul>
+		</div>
+	<% end %>
+	<% if @page.size_prices.count>0 %>
+		<table>
 			<thead>
 				<tr>
-					<th>Наименование</th>
-					<th>Размеры</th>
-					<th>Цена</th>
+					<th class="th_1">Наименование</th>
+					<th class="th_2">Размеры</th>
+					<th class="th_3">Цвет</th>
+					<th class="th_4">Вес</th>
+					<th class="th_5">Цена</th>
 				</tr>
 			</thead>
-			<%= render @page.size_prices %>
+		<%= render @page.size_prices %>
 		</table>
-		<% end %>
-		<%= render @page.gallery_bots if !@page.gallery_bots.nil? %>
-  <% end %>
+	<% end %>
+	<% if @page.slug!="order" or @page.slug!="index" %>
+	<h4>Инструкция по сборке </h4>
+		<div class="gallery_7 ">
+			<ul>
+				<%= render @page.gallery_bots if !@page.gallery_bots.nil? %>
+			</ul>
+		</div>
+	<% end %>
 </div>
 

@@ -39,10 +39,8 @@ ActiveAdmin.register Page do
 		  	f.input :slug 
 			f.input :content, as: :ckeditor 
 		end  
-		f.inputs "Стенд", :for => [:stand, f.object.stand || Stand.new] do |stand|
-			stand.input :content
-		end
-		f.inputs do
+
+		f.inputs "Стенд" do
 			f.has_many :gallery_tops do |p|
 	      unless p.object.new_record?
 	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
@@ -59,6 +57,8 @@ ActiveAdmin.register Page do
 	      end
 				sp.input :size
 				sp.input :price
+				sp.input :color
+				sp.input :weight
 		  end
 	 	end
 		f.inputs do
