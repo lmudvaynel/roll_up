@@ -276,6 +276,10 @@ a.button:active  {
 .wrap_more {
 	margin-bottom: 17px;
 }
+
+.mores {
+	z-index:1000;
+}
 .more:hover, .current_stand {
   text-decoration: none;
   color: #fff;
@@ -394,7 +398,11 @@ a.button:active  {
 h4 {
 	font-weight: bold;
 }
+/* Таблица с ценами */
 
+table {
+	margin-bottom: 20px;
+}
 th {
 	border: 1px solid;
 }

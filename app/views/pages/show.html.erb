@@ -23,6 +23,7 @@
 		<%= render @page.size_prices %>
 		</table>
 	<% end %>
+	<%= link_to "Заказать", "/order", {class: "button"} %>
 	<% if @page.gallery_bots.count>0 %>
 	<h4>Инструкция по сборке </h4>
 		<div class="gallery_7 ">
