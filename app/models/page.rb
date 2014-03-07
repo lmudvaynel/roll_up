@@ -8,7 +8,6 @@ class Page < ActiveRecord::Base
   has_many :size_prices
   has_many :gallery_tops
   has_many :gallery_bots
-  #has_ancestry
   acts_as_list
 
   accepts_nested_attributes_for :seo, :allow_destroy => true, :reject_if => :all_blank

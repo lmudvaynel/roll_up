@@ -67,8 +67,13 @@ ActiveAdmin.register Page do
 	        : p.template.content_tag(:span, "Изображение отсутствует")
 	    end
 		end
+
+		f.input :seo_id, as: :select,
+              collection: Hash[Discount.all.map{|stand| ["#{stand.id}",stand.id]}] 
+	  
 	  f.inputs "СЕО", :for => [:seo, f.object.seo || Seo.new] do |seo|
-		  seo.input :title
+		  seo.input :title 
+	  
 		  seo.input :description
 		  seo.input :keywords
 		end

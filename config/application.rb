@@ -62,5 +62,6 @@ module RollUp
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru]
     I18n.locale = :ru
+
   end
 end
