@@ -526,8 +526,8 @@
 					}
 				}
 				
-				if(settings.autoplay_slideshow && !pp_slideshow && !pp_open) $.prettyPhoto.startSlideshow();
-				
+				 /*if(settings.autoplay_slideshow && !pp_slideshow && !pp_open) $.prettyPhoto.startSlideshow();
+				*/
 				settings.changepicturecallback(); // Callback!
 				
 				pp_open = true;
