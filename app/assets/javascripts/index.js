@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-	$(".wrap_more").find(".more").addClass("current_stand");
-	$(".wrap_more").find(".more").removeClass("current_stand");
-
 	$(".gallery_1 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 	$(".gallery_2 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 	$(".gallery_3 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
@@ -47,10 +44,10 @@ $(document).ready(function(){
 	$(".column").mouseenter(function(){
 		$(this).find(".mores").mouseenter(function(){
 			$(this).find(".wrap_more").find(".more").addClass("current_stand");
-		}).mouseleave(function(){
-			$(".wrap_more").find(".more").removeClass("current_stand");
-		});
-
+			}).mouseleave(function(){
+				$(".wrap_more").find(".more").removeClass("current_stand");
+			}
+		);
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({
