@@ -42,6 +42,11 @@ $(document).ready(function(){
 	});
 	
 	$(".column").mouseenter(function(){
+		$(this).find(".mores").mouseenter(function(){
+			$(this).find(".wrap_more").find(".more").addClass("current_stand");
+		}).mouseleave(function(){
+			$(".wrap_more").find(".more").removeClass("current_stand");
+		});
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({
@@ -64,4 +69,6 @@ $(document).ready(function(){
 			color: "#949597",
 		},500);
 	});
+
 });
+
