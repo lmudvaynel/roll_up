@@ -47,6 +47,7 @@ $(document).ready(function(){
 		}).mouseleave(function(){
 			$(".wrap_more").find(".more").removeClass("current_stand");
 		});
+		
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({
