@@ -101,6 +101,10 @@ $short-sprite-dimensions: true;
 	height: 160px;
 	margin-top: 30px;
 }
+.speech:hover, .site_name:active{
+	background: url(../assets/favicon.ico) no-repeat;
+	text-decoration:none;
+}
 /* Footer */
 
 .footer {
