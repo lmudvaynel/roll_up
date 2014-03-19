@@ -101,7 +101,7 @@ $short-sprite-dimensions: true;
 	height: 160px;
 	margin-top: 30px;
 }
-.speech:hover, .site_name:active{
+.speech:hover, .speech:active{
 	background: url(../assets/favicon.ico) no-repeat;
 	text-decoration:none;
 }
@@ -353,10 +353,6 @@ a.button:active  {
     list-style: none;
     margin: 0 0 18px 0;
   }
-}
-
-.my_image_size {
-  height: 35%;
 }
 
 /* Галлереи */
