@@ -2,7 +2,7 @@
 <div class="wrapper">
 	<%= image_tag(@dsc.image.url) if @page.slug==@dsc.stand_slug%>
 	<%= raw @page.content %>
-	<% if @page.slug!="order" && @page.slug!="index" && @page.slug!="design" %>
+	<% if @page.slug!="order" && @page.slug!="index" %>
 	<% if @page.gallery_tops.count>0 %>
 	<h4>
 		<% if @page.gallery_top_name.blank? %>
