@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140319090027) do
+ActiveRecord::Schema.define(:version => 20140319113116) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -118,12 +118,14 @@ ActiveRecord::Schema.define(:version => 20140319090027) do
     t.string   "name"
     t.string   "slug"
     t.text     "content"
-    t.boolean  "hidden",     :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "hidden",           :default => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "seo_id"
     t.integer  "position"
     t.integer  "stand_id"
+    t.string   "gallery_top_name"
+    t.string   "gallery_bot_name"
   end
 
   add_index "pages", ["position"], :name => "index_pages_on_position"

@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   attr_accessible :slug, :seo_id, :content, :seo_attributes, 
-                  :position, :name,
-                  :size_prices_attributes, 
+                  :position, :name, :gallery_top_name,
+                  :size_prices_attributes, :gallery_bot_name,
                   :gallery_tops_attributes, :gallery_bots_attributes
 
   belongs_to :seo

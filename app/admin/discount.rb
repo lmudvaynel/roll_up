@@ -19,7 +19,7 @@ ActiveAdmin.register Discount do
 	form do |f|
 		f.inputs do 
 		  f.input :image, :as => :file, :hint => f.object.image.present? \
-		    ? image_tag(f.object.image.url(:thumb))
+		    ? image_tag(f.object.image.url(:medium))
 		    : f.template.content_tag(:span, "Изображение отсутствует")
   		f.input :stand_slug, as: :select,
         collection: Hash[Page.where(["slug != ? and slug != ? and slug != ?","index", "order", "design"]).map{|page| ["#{page.name}", page.slug]}] 

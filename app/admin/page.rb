@@ -37,6 +37,7 @@ ActiveAdmin.register Page do
 		end  
 
 		f.inputs "Стенд" do
+			f.input :gallery_top_name
 			f.has_many :gallery_tops do |p|
 	      unless p.object.new_record?
 	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
@@ -60,6 +61,7 @@ ActiveAdmin.register Page do
 		  end
 	 	end
 		f.inputs do
+			f.input :gallery_bot_name
 			f.has_many :gallery_bots do |p|
 	      unless p.object.new_record?
 	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false

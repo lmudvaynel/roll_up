@@ -65,13 +65,13 @@ ru:
           one: изображение
           few: Галерей
           many: Галерей
-          other: Галерея стенда
+          other: Особенности конструкции (по умолчанию)
        gallery_bot:
           zero: Галерей 
           one: изображение
           few: Галерей
           many: Галерей
-          other: Инструкция для сборки
+          other: Галерея стенда (по умолчанию)
        discount:
           zero: Скидок
           one: Скидка
@@ -118,6 +118,8 @@ ru:
          slug: Псевдоним
          updated_at: Дата обновления
          content: Содержание
+         gallery_top_name: Название верхней галереи
+         gallery_bot_name: Название нижней галереи
        order:
           name: Имя
           company: Компания
