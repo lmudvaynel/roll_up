@@ -22,7 +22,7 @@ ActiveAdmin.register Discount do
 		    ? image_tag(f.object.image.url(:thumb))
 		    : f.template.content_tag(:span, "Изображение отсутствует")
   		f.input :stand_slug, as: :select,
-        collection: Hash[Page.all.map{|page| ["#{page.name}", page.slug]}] 
+        collection: Hash[Page.where(["slug != ? and slug != ? and slug != ?","index", "order", "design"]).map{|page| ["#{page.name}", page.slug]}] 
 			end
 		f.actions
 	end
