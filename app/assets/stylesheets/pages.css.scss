@@ -55,6 +55,7 @@ $short-sprite-dimensions: true;
 	color: #949597;
 	font-family: CondProBold;
 	text-transform: uppercase;
+	line-height: 50px;
 }
 
 .site_name:hover, .site_name:active{
@@ -66,21 +67,33 @@ $short-sprite-dimensions: true;
 
 }
 .head_info {
-	font-size: 36px;
 	float: left;
+	margin-top: 45px;
+	height: 111px;
+}
+.head_info_string {
+	font-size: 36px;
 	width: 297px;
 	padding: 0px 15px;
 	text-transform: uppercase;
-	line-height: 31px;
 	border-left: 5px solid #cb272e;
-	margin-top: 40px;
 	font-family: CondProBold;
 }
-
+.info_1{
+	line-height: 24px;
+}
+.info_2{
+	line-height: 38px;
+}
+.info_3{
+	line-height: 28px;
+}
 .head_phone {
 	font-size: 40px;
 	color: #cb272e;
 	font-family: CondProBold;
+	margin-top: 16px;
+	line-height: 42px;
 }
 .chaplin {
 	background: url(../assets/chaplin.png) no-repeat;
