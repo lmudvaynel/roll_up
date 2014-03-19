@@ -72,6 +72,12 @@ ru:
           few: Галерей
           many: Галерей
           other: Инструкция для сборки
+       discount:
+          zero: Скидок
+          one: Скидка
+          few: Скидок
+          many: Скидок
+          other: Скидки
        seo:
          СЕО
      attributes:
@@ -133,5 +139,12 @@ ru:
          content: Описание стенда
        gallery_top:
          image: Изображение
+         alt: Описание
+         title: Название
        gallery_bot:
+         image: Изображение
+         alt: Описание
+         title: Название
+       discount:
+         position: Позиция
          image: Изображение
