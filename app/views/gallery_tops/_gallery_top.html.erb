@@ -1,6 +1,6 @@
 <% @i=@i+1 %>
 	<li class="<%="li_#@i" if @i==1%>">
-		<a href="<%=gallery_top.image.url(:original)%>" rel="prettyPhoto[pp_gal]"><img src="<%=gallery_top.image.url(:medium)%>" alt="Nice building" style="visibility:visible;" title="Nice building"  /></a>
+		<a href="<%=gallery_top.image.url(:original)%>" rel="prettyPhoto[pp_gal]"><img src="<%=gallery_top.image.url(:medium)%>" alt="<%=gallery_top.alt %>" style="visibility:visible;" title="<%=gallery_top.title %>" /></a>
 	</li>
 
 

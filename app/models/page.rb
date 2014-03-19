@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
-  attr_accessible :slug, :hidden, :seo_id, :content, :seo_attributes, 
-                  :layout, :position, :name,
+  attr_accessible :slug, :seo_id, :content, :seo_attributes, 
+                  :position, :name,
                   :size_prices_attributes, 
                   :gallery_tops_attributes, :gallery_bots_attributes
 

@@ -44,6 +44,8 @@ ActiveAdmin.register Page do
 			  p.input :image, :as => :file, :hint => p.object.image.present? \
 	        ? image_tag(p.object.image.url(:thumb))
 	        : p.template.content_tag(:span, "Изображение отсутствует")
+	      p.input :alt
+	      p.input :title
 	    end
 		end
 		f.inputs do
@@ -65,6 +67,8 @@ ActiveAdmin.register Page do
 			  p.input :image, :as => :file, :hint => p.object.image.present? \
 	        ? image_tag(p.object.image.url(:thumb))
 	        : p.template.content_tag(:span, "Изображение отсутствует")
+	    	p.input :alt
+	      p.input :title
 	    end
 		end
 

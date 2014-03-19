@@ -1,5 +1,5 @@
 class GalleryTop < ActiveRecord::Base
-  attr_accessible :image
+  attr_accessible :image, :alt, :title
 
   belongs_to :pages
   
