@@ -40,6 +40,14 @@ $(document).ready(function(){
 			$(this).css({'margin-left':-((imgWidth-187)/2)});
 		}
 	});
+
+	var maxHeight = Math.max.apply(null, $("div.stand_descr").map(function (){
+    return $(this).height();
+	}).get());
+
+	$(".stand_descr").each(function() {
+		$(this).css({'height':maxHeight});
+	});
 	
 	$(".column").mouseenter(function(){
 		$(this).find(".mores").mouseenter(function(){
