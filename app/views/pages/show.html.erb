@@ -1,7 +1,7 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
 	<%= raw @page.content %>
-	<% if @page.slug!="order" or @page.slug!="index" %>
+	<% if @page.slug!="order" && @page.slug!="index" && @page.slug!="design" %>
 	<% if @page.gallery_tops.count>0 %>
 		<div class="gallery_6 ">
 			<ul>
