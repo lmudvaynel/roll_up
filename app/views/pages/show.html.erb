@@ -3,6 +3,7 @@
 	<%= raw @page.content %>
 	<% if @page.slug!="order" && @page.slug!="index" && @page.slug!="design" %>
 	<% if @page.gallery_tops.count>0 %>
+	<h4>Инструкция по сборке </h4>
 		<div class="gallery_6 ">
 			<ul>
 				<%= render @page.gallery_tops %>
@@ -25,7 +26,7 @@
 	<% end %>
 	<%= link_to "Заказать", "/order", {class: "button"} %>
 	<% if @page.gallery_bots.count>0 %>
-	<h4>Инструкция по сборке </h4>
+	<h4>Примеры работ </h4>
 		<div class="gallery_7 ">
 			<ul>
 				<%= render @page.gallery_bots%>
