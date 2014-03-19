@@ -1,6 +1,6 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
-		<%= image_tag @dsc.image.url if !@dsc.nil? %>
+		<%=link_to (image_tag(@dsc.image.url)),page_slug_path(@dsc.stand_slug) if !@dsc.nil? %>
     <%= raw @page.content %>
 </div>
 

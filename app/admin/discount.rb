@@ -9,6 +9,7 @@ ActiveAdmin.register Discount do
 	index do
 		sortable_handle_column
 		column :position, :sortable => :position
+		column :stand_slug
 		column "Image" do |dc|
       image_tag dc.image, class: 'my_image_size'
     end
@@ -20,6 +21,8 @@ ActiveAdmin.register Discount do
 		  f.input :image, :as => :file, :hint => f.object.image.present? \
 		    ? image_tag(f.object.image.url(:thumb))
 		    : f.template.content_tag(:span, "Изображение отсутствует")
+  		f.input :stand_slug, as: :select,
+        collection: Hash[Page.all.map{|page| ["#{page.name}", page.slug]}] 
 			end
 		f.actions
 	end

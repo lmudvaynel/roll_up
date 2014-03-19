@@ -1,5 +1,5 @@
 class Discount < ActiveRecord::Base
-  attr_accessible :image, :position
+  attr_accessible :image, :position, :stand_slug
   
   has_attached_file :image,
  					:styles => { :medium => "600x600>", :thumb => "100x100>" }
