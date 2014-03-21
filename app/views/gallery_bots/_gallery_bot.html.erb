@@ -1,11 +1,8 @@
   <li class="<%="gallery_li_#{index}"%>">
-    <a href="<%=gallery_bot.image.url(:original)%>" rel="prettyPhoto[pp_gal]">
-      <img src="<%=gallery_bot.image.url(:gallery)%>" 
-           alt="<%=gallery_bot.alt %>"
-           title="<%=gallery_bot.title %>" />
-    </a>
-    <%= link_to "" do %>
-       
+    <%= link_to gallery_bot.image.url(:original), rel: "prettyPhoto[pp_gal]" do %>
+      <%= image_tag gallery_bot.image.url(:gallery), 
+                    alt: gallery_bot.alt,
+                    title: gallery_bot.title %>
     <% end %>
   </li>
 
