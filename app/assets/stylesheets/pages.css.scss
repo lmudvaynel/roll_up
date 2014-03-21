@@ -172,7 +172,6 @@ $short-sprite-dimensions: true;
 	border-bottom: 1px dashed #fff;
 }
 .block {
-	height: 800px;
 	position: relative;
 	float: left;
 	width: 196px;
@@ -217,7 +216,6 @@ $short-sprite-dimensions: true;
 	padding-bottom: 20px;
 }
 .stand_info {
-	height: 450px;
 	padding: 10px;
 }
 .order {
@@ -375,8 +373,6 @@ a.button:active  {
 	li {
 		overflow: hidden;
 		bottom: 10px;
-		text-align: center;
-		visibility:hidden;
 	}
 }
 .gallery_6, .gallery_7 {
@@ -396,11 +392,11 @@ a.button:active  {
 	}
 }
 
-.gallery_6 > ul > .li_1 {
+.gallery_6 > ul > .gallery_li_0 {
 	margin-left: 0px;
 }
 
-.gallery_7 > ul > .li_1 {
+.gallery_7 > ul > .gallery_li_0 {
 	margin-left: 0px;
 }
 

@@ -1,4 +1,12 @@
-<% @j=@j+1 %>
-	<li class="<%="li_#@j" if @j==1%>">
-		<a href="<%=gallery_bot.image.url(:original)%>" rel="prettyPhoto[pp_gal]"><img src="<%=gallery_bot.image.url(:medium)%>" alt="<%=gallery_bot.alt %>" style="visibility:visible;" title="<%=gallery_bot.title %>"  /></a>
-	</li>
+  <li class="<%="gallery_li_#{index}"%>">
+    <a href="<%=gallery_bot.image.url(:original)%>" rel="prettyPhoto[pp_gal]">
+      <img src="<%=gallery_bot.image.url(:gallery)%>" 
+           alt="<%=gallery_bot.alt %>"
+           title="<%=gallery_bot.title %>" />
+    </a>
+    <%= link_to "" do %>
+       
+    <% end %>
+  </li>
+
+

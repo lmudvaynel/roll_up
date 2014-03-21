@@ -29,10 +29,10 @@ module Paperclip
       # inspired by the thumbnail processor
       options = [
         "-gravity",
-        "SouthWest",
+        "SouthEast",
         "#{@watermark}",
         "-extract",
-        "#{@current_geometry.width.to_i}x#{@current_geometry.height.to_i}+#{@watermark_geometry.height.to_i / 2}+#{@watermark_geometry.width.to_i / 2}",
+        "#{if @current_geometry.width.to_i>@current_geometry.height.to_i then @current_geometry.height.to_i else @current_geometry.width.to_i end}x#{@current_geometry.height.to_i}",
         File.expand_path(@file.path),
         File.expand_path(dst.path)
       ].flatten.compact.join(" ").strip.squeeze(" ")

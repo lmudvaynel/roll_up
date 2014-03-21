@@ -11,12 +11,12 @@
 <%= form_for(order) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-  	<%= f.text_field :name, placeholder: "Ваше имя", class: "input_order" %>
-  	<%= f.text_field :company, placeholder: "Компания", class: "input_order"  %>
-  	<%= f.text_field :phone, placeholder: "Телефон", class: "input_order"  %>
-  	<%= f.text_field :email, placeholder: "E-mail", class: "input_order"  %>
+    <%= f.text_field :name, placeholder: "Ваше имя", class: "input_order" %>
+    <%= f.text_field :company, placeholder: "Компания", class: "input_order"  %>
+    <%= f.text_field :phone, placeholder: "Телефон", class: "input_order"  %>
+    <%= f.text_field :email, placeholder: "E-mail", class: "input_order"  %>
     <%= f.text_area :content, placeholder: "Описание заказа..." %>
- 	</div>  
+  </div>  
   
   <%= f.submit "Заказать", class: "button" %>
 <% end %>

@@ -1,51 +1,55 @@
 <% provide(:title, @page.name) %>
 <div class="wrapper">
-	<%= image_tag(@dsc.image.url) if @page.slug==@dsc.stand_slug%>
-	<%= raw @page.content %>
-	<% if @page.slug!="order" && @page.slug!="index" %>
-	<% if @page.gallery_tops.count>0 %>
-	<h4>
-		<% if @page.gallery_top_name.blank? %>
-			Особенности конструкции
-		<% else %>
-			<%= @page.gallery_top_name %>
-		<% end %>
-	</h4>
-		<div class="gallery_6 ">
-			<ul>
-				<%= render @page.gallery_tops %>
-			</ul>
-		</div>
-	<% end %>
-	<% if @page.size_prices.count>0 %>
-		<table>
-			<thead>
-				<tr>
-					<th class="th_1">Наименование</th>
-					<th class="th_2">Размеры</th>
-					<th class="th_3">Цвет</th>
-					<th class="th_4">Вес</th>
-					<th class="th_5">Цена</th>
-				</tr>
-			</thead>
-		<%= render @page.size_prices %>
-		</table>
-	<% end %>
-	<%= link_to "Заказать", "/order", {class: "button"} %>
-	<% if @page.gallery_bots.count>0 %>
-	<h4>
-		<% if @page.gallery_bot_name.blank? %>
-			Примеры работ
-		<% else %>
-			<%= @page.gallery_bot_name %>
-		<% end %>
-	</h4>
-		<div class="gallery_7 ">
-			<ul>
-				<%= render @page.gallery_bots%>
-			</ul>
-		</div>
-	<% end %>
-	<% end %>
+  <%= image_tag(@dsc.image.url) if @page.slug==@dsc.stand_slug%>
+  <%= raw @page.content %>
+  <% if @page.slug!="order" && @page.slug!="index" %>
+    <% if @page.gallery_tops.count>0 %>
+    <h4>
+      <% if @page.gallery_top_name.blank? %>
+        Особенности конструкции
+      <% else %>
+        <%= @page.gallery_top_name %>
+      <% end %>
+    </h4>
+      <div class="gallery_6 ">
+        <ul>
+          <% @page.gallery_tops.each_with_index do |gallery_top, i| %>
+            <%= render gallery_top, index: i  %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if @page.size_prices.count>0 %>
+      <table>
+        <thead>
+          <tr>
+            <th class="th_1">Наименование</th>
+            <th class="th_2">Размеры</th>
+            <th class="th_3">Цвет</th>
+            <th class="th_4">Вес</th>
+            <th class="th_5">Цена</th>
+          </tr>
+        </thead>
+      <%= render @page.size_prices %>
+      </table>
+    <% end %>
+    <%= link_to "Заказать", "/order", {class: "button"} %>
+    <% if @page.gallery_bots.count>0 %>
+      <h4>
+        <% if @page.gallery_bot_name.blank? %>
+          Примеры работ
+        <% else %>
+          <%= @page.gallery_bot_name %>
+        <% end %>
+      </h4>
+      <div class="gallery_7 ">
+        <ul>
+          <% @page.gallery_bots.each_with_index do |gallery_bot, i| %>
+            <%= render gallery_bot, index: i  %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 

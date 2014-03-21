@@ -30,52 +30,51 @@ ActiveAdmin.register Page do
 	end
 
 	form do |f|
-	  	f.inputs "Наполнение" do
-		  	f.input :name
-		  	f.input :slug 
+	  f.inputs "Наполнение" do
+		 	f.input :name
+		 	f.input :slug 
 			f.input :content, as: :ckeditor 
-		end  
+		end 	 
 
-		f.inputs "Стенд" do
-			f.input :gallery_top_name
-			f.has_many :gallery_tops do |p|
-	      unless p.object.new_record?
-	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
-	      end
-			  p.input :image, :as => :file, :hint => p.object.image.present? \
-	        ? image_tag(p.object.image.url(:thumb))
-	        : p.template.content_tag(:span, "Изображение отсутствует")
-	      p.input :alt
-	      p.input :title
-	    end
+		if f.object.slug != "index" and f.object.slug != "order"
+			f.inputs "Стенд" do
+				f.input :gallery_top_name
+				f.has_many :gallery_tops do |p|
+		      unless p.object.new_record?
+		      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
+		      end
+				  p.input :image, :as => :file, :hint => p.object.image.present? \
+		        ? image_tag(p.object.image.url(:thumb))
+		        : p.template.content_tag(:span, "Изображение отсутствует")
+		      p.input :alt
+		      p.input :title
+		    end
+			end
+			f.inputs do
+		  	f.has_many :size_prices do |sp|
+		  		unless sp.object.new_record?
+		      	sp.input :_destroy, :as => :boolean, :label => "Удалить размеры?", :required => false
+		      end
+					sp.input :size
+					sp.input :price
+					sp.input :color
+					sp.input :weight
+			  end
+		 	end
+			f.inputs do
+				f.input :gallery_bot_name
+				f.has_many :gallery_bots do |p|
+		      unless p.object.new_record?
+		      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
+		      end
+				  p.input :image, :as => :file, :hint => p.object.image.present? \
+		        ? image_tag(p.object.image.url(:thumb))
+		        : p.template.content_tag(:span, "Изображение отсутствует")
+		    	p.input :alt
+		      p.input :title
+		    end
+			end
 		end
-		f.inputs do
-	  	f.has_many :size_prices do |sp|
-	  		unless sp.object.new_record?
-	      	sp.input :_destroy, :as => :boolean, :label => "Удалить размеры?", :required => false
-	      end
-				sp.input :size
-				sp.input :price
-				sp.input :color
-				sp.input :weight
-		  end
-	 	end
-		f.inputs do
-			f.input :gallery_bot_name
-			f.has_many :gallery_bots do |p|
-	      unless p.object.new_record?
-	      	p.input :_destroy, :as => :boolean, :label => "Удалить изображение?", :required => false
-	      end
-			  p.input :image, :as => :file, :hint => p.object.image.present? \
-	        ? image_tag(p.object.image.url(:thumb))
-	        : p.template.content_tag(:span, "Изображение отсутствует")
-	    	p.input :alt
-	      p.input :title
-	    end
-		end
-
-		f.input :seo_id, as: :select,
-              collection: Hash[Discount.all.map{|stand| ["#{stand.id}",stand.id]}] 
 	  
 	  f.inputs "СЕО", :for => [:seo, f.object.seo || Seo.new] do |seo|
 		  seo.input :title 

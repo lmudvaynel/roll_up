@@ -4,8 +4,6 @@ class PagesController < ApplicationController
     @dsc = Discount.find_by_position(1)
     @page = Page.find_by_slug(params[:slug]) || Page.find(params[:slug])
     render params[:slug] if controller_view_exists?(params[:slug])
-    @i=0
-    @j=0
   end
 
   def order

@@ -8,54 +8,33 @@ $(document).ready(function(){
 	$(".gallery_6 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 	$(".gallery_7 a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook */slideshow:5000, autoplay_slideshow:true});
 	
-	var $img = $('.gallery_6 img');
-	$img.load(function(){
-		var imgHeight = $(this).height();
-		var imgWidth = $(this).width();
-		if (imgHeight > imgWidth) {
-			$(this).css({'width':'100%'});
-			var imgHeight = $(this).height();
-			$(this).css({'margin-top':-((imgHeight-187)/2)});
-		}
-		else {
-			$(this).css({'height':'100%'});
-			var imgWidth = $(this).width();
-			$(this).css({'margin-left':-((imgWidth-187)/2)});
-		}
-	
-	});
 
-	var $img = $('.gallery_7 img');
-	$img.load(function(){
-		var imgHeight = $(this).height();
-		var imgWidth = $(this).width();
-		if (imgHeight > imgWidth) {
-			$(this).css({'width':'100%'});
-			var imgHeight = $(this).height();
-			$(this).css({'margin-top':-((imgHeight-187)/2)});
-		}
-		else {
-			$(this).css({'height':'100%'});
-			var imgWidth = $(this).width();
-			$(this).css({'margin-left':-((imgWidth-187)/2)});
-		}
-	});
 
-	var maxHeight = Math.max.apply(null, $("div.stand_descr").map(function (){
+	var maxHeightD = Math.max.apply(null, $("div.stand_descr").map(function (){
     return $(this).height();
 	}).get());
 
 	$(".stand_descr").each(function() {
-		$(this).css({'height':maxHeight});
+		$(this).css({'height':maxHeightD});
 	});
-	
-	$(".column").mouseenter(function(){
-		$(this).find(".mores").mouseenter(function(){
+
+	var maxHeight = Math.max.apply(null, $("div.stand_info").map(function (){
+    return $(this).height();
+	}).get());
+
+	$(".block").each(function() {
+		$(this).css({'height':maxHeight+maxHeightD+320});
+	});
+
+	$(".mores").mouseenter(function(){
 			$(this).find(".wrap_more").find(".more").addClass("current_stand");
 			}).mouseleave(function(){
 				$(".wrap_more").find(".more").removeClass("current_stand");
 			}
 		);
+	
+	$(".column").mouseenter(function(){
+		
 		$(this).addClass("current");
 		$(this).find(".stand_name").addClass("current_name");
 		$(this).stop().animate({

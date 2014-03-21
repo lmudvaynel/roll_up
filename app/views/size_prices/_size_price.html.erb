@@ -1,5 +1,5 @@
 <tbody>
-	<tr bgcolor="<%="#21f22c" if !size_price.price.upcase.scan("Акция".upcase).blank? %>">
+	<tr bgcolor="<%="#21f22c" if size_price.price =~ /акция/i %>">
 		<td><%= @page.name %></td>
 		<td>"<%= size_price.size %></td>
 		<td><%= size_price.color %></td>

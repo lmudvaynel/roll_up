@@ -11,7 +11,7 @@ ActiveAdmin.register Discount do
 		column :position, :sortable => :position
 		column :stand_slug
 		column "Image" do |dc|
-      image_tag dc.image, class: 'my_image_size'
+      image_tag dc.image.url(:medium)
     end
 		default_actions
 	end
@@ -22,7 +22,7 @@ ActiveAdmin.register Discount do
 		    ? image_tag(f.object.image.url(:medium))
 		    : f.template.content_tag(:span, "Изображение отсутствует")
   		f.input :stand_slug, as: :select,
-        collection: Hash[Page.where(["slug != ? and slug != ? and slug != ?","index", "order", "design"]).map{|page| ["#{page.name}", page.slug]}] 
+        collection: Hash[Page.where("slug NOT IN (?)", ["index", "order", "design"]).map{|page| ["#{page.name}", page.slug]}] 
 			end
 		f.actions
 	end
