@@ -108,14 +108,13 @@ $short-sprite-dimensions: true;
 }
 
 .speech {
-	background: url(../assets/words.png) no-repeat;
+	background: url(../assets/words.gif) no-repeat;
 	float: left;
 	width: 281px;
 	height: 160px;
 	margin-top: 30px;
 }
 .speech:hover, .speech:active{
-	background: url(../assets/words_hover.png) no-repeat;
 	text-decoration:none;
 }
 /* Footer */
