@@ -1,4 +1,3 @@
-
 namespace :images do
   desc 'Sync images to local workstation'
   task :load_from_server, :roles => :app do
