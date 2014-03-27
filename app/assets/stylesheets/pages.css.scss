@@ -104,7 +104,7 @@ $short-sprite-dimensions: true;
 .standee_logo {
 	background: transparent;
   margin-top: -29px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .speech {
@@ -179,7 +179,7 @@ $short-sprite-dimensions: true;
 .stand_descr {
 	color: #949597;
 	overflow: hidden;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: bold;
 }
 .stand_name{
@@ -191,6 +191,7 @@ $short-sprite-dimensions: true;
 	text-align: left;
 	clear: both;
 	width: 188px;
+	background-color: #fff;
 }
 .stand_name:hover, .stand_name:active {
 	color: #fff;
@@ -199,7 +200,7 @@ $short-sprite-dimensions: true;
 .stand_size {
 	float: left;
 	clear: both;
-	margin-left: 8px;
+	margin-left: 10px;
 }
 .stand_price {
 	color: #cb272e;
@@ -321,6 +322,22 @@ a.button:active  {
 }
 .current_name {
 	text-align: center;
+}
+.current_stand_name {
+	text-align: center;
+	background-color: #cb272e;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	clear: both;
+	width: 188px;
+}
+
+.current_stand_name:hover, .current_stand_name:active {
+	color: #fff;
+	text-decoration: none;
 }
 .main_content {
 	clear:both
@@ -477,4 +494,25 @@ table > thead > tr > .th_5 {
 td {
 	border: 1px solid;
 	text-align: center;
+}
+
+/* MENU */
+
+.menu {
+	padding: 0px;
+	border-bottom: 3px solid #cb272e;
+}
+
+ul > .menu_1 {
+	overflow: hidden;
+	display: inline-block;
+	width: 187px;
+	margin-left: 0px;
+}
+
+.menu_element {
+	overflow: hidden;
+	display: inline-block;
+	width: 187px;
+	margin-left: 7px;
 }

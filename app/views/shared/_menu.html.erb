@@ -1,9 +1,37 @@
-<nav class="header-menu">
-	<ul>
-		<% Page.visible.each do |stand| %>
-				<li class="menu_item <%= menu_item_state(stand)%>">
-					<%= link_to content_tag(:span, stand.name), page_slug_path(stand) %>  
-				</li>
-		<% end %>
-	</ul>
-</nav>
+<ul class = "menu">
+  <li class="menu_element menu_1">
+    <% if @page.slug=="roll-up" %>
+      <%= link_to "Roll-Up", page_slug_path("roll-up"), class: "current_stand_name" %>
+    <% else %>
+      <%= link_to "Roll-Up", page_slug_path("roll-up"), class: "stand_name" %>
+    <% end %>
+  </li>
+  <li class="menu_element">
+    <% if @page.slug=="l-banner" %>
+      <%= link_to "L-Banner", page_slug_path("l-banner"), class: "current_stand_name" %>
+    <% else %>
+      <%= link_to "L-Banner", page_slug_path("l-banner"), class: "stand_name" %>
+    <% end %>
+  </li>
+  <li class="menu_element">
+    <% if @page.slug=="press-wall" %>
+      <%= link_to "Press Wall", page_slug_path("press-wall"), class: "current_stand_name" %>
+    <% else %>
+      <%= link_to "Press Wall", page_slug_path("press-wall"), class: "stand_name" %>
+    <% end %>
+  </li>
+  <li class="menu_element">
+    <% if @page.slug=="pop-up" %>
+      <%= link_to "Pop Up", page_slug_path("pop-up"), class: "current_stand_name" %>
+    <% else %>
+      <%= link_to "Pop Up", page_slug_path("pop-up"), class: "stand_name" %>
+    <% end %>
+  </li>
+  <li class="menu_element">
+    <% if @page.slug=="x-banner" %>
+      <%= link_to "X-Banner", page_slug_path("x-banner"), class: "current_stand_name" %>
+    <% else %>
+      <%= link_to "X-Banner", page_slug_path("x-banner"), class: "stand_name" %>
+    <% end %>
+  </li>
+</ul>
