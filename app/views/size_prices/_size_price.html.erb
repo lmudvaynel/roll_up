@@ -1,5 +1,5 @@
 <tbody>
-	<tr bgcolor="<%="#21f22c" if size_price.price =~ /акция/i %>">
+	<tr bgcolor="<%="#21f22c" if size_price.price =~ /акци+(я|и|й|ю|ей|ею|ях|ями|ям)/i %>">
 		<td><%= @page.name %></td>
 		<td>"<%= size_price.size %></td>
 		<td><%= size_price.color %></td>

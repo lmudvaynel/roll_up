@@ -25,7 +25,6 @@ ActiveAdmin.register Page do
 		column :position, :sortable => :position
 		column :name
 		column :slug
-		column :content
 		default_actions
 	end
 
