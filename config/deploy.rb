@@ -7,7 +7,7 @@ set :stages, %w(production staging)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
-set :application, "roll" #write app name there
+set :application, "roll_up" #write app name there
 
 set :scm, :git
 set :repository,  "git@github.com:lmudvaynel/roll_up.git" #place your repo there
