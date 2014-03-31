@@ -118,8 +118,8 @@ ru:
          slug: Псевдоним
          updated_at: Дата обновления
          content: Содержание
-         left_content: Контент слева
-         right_content: Контент справа
+         gallery_top_name: Название верхней галереи
+         gallery_bot_name: Название нижней галереи
        order:
           name: Имя
           company: Компания
