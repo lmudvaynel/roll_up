@@ -23,7 +23,7 @@ $(document).ready(function(){
 	}).get());
 
 	$(".block").each(function() {
-		$(this).css({'height':maxHeight+maxHeightD+320});
+		$(this).css({'height':maxHeight+maxHeightD+340});
 	});
 
 	$(".mores").mouseenter(function(){
