@@ -2,7 +2,7 @@ namespace :images do
   desc 'Sync images to local workstation'
   task :load_from_server, :roles => :app do
     find_servers_for_task(current_task).each do |current_server|
-      remote_dir = "#{current_path}/public"
+      remote_dir = "#{current_path}/public/uploads"
       local_dir  = './public'
       options    = '--progress --delete -av'
       user_host  = "#{user}@#{current_server.host}"
