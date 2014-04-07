@@ -6,6 +6,7 @@
 	font-family: 'CondProBold';
 	src: url('/images/PFDinTextCondPro-Bold.eot');
 	src: url('/images/PFDinTextCondPro-Bold.eot?#iefix') format('embedded-opentype'),
+			 url('/images/PFDinTextCondPro-Bold.otf') format('opettype'),
 			 url('/images/PFDinTextCondPro-Bold.ttf') format('truetype');
 }
 
@@ -13,9 +14,8 @@
 	font-family: 'PT Sans Bold';
 	src: url('/images/PT-Sans-bold.eot');
 	src: url('/images/PT-Sans-bold.eot?#iefix') format('embedded-opentype'),
+			 url('/images/PT-Sans-bold.otf') format('opentype'),
 			 url('/images/PT-Sans-bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: bold;
 }
 
 /*Шрифты конец*/
