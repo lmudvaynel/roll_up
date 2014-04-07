@@ -9,6 +9,24 @@
 			 url('/images/PFDinTextCondPro-Bold.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'PT Sans Normal';
+	src: url('/images/PT-Sans-normal.eot');
+	src: url('/images/PT-Sans-normal.eot?#iefix') format('embedded-opentype'),
+			 url('/images/PT-Sans-normal.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Sans Bold';
+	src: url('/images/PT-Sans-bold.eot');
+	src: url('/images/PT-Sans-bold.eot?#iefix') format('embedded-opentype'),
+			 url('/images/PT-Sans-bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: bold;
+}
+
 /*Шрифты конец*/
 
 $short-sprite-dimensions: true;
@@ -43,7 +61,7 @@ $short-sprite-dimensions: true;
 
 .site_name {
 	color: #949597;
-	font-family: 'CondProBold';
+	font-family: 'PT Sans Normal';
 	text-transform: uppercase;
 	line-height: 50px;
 }
@@ -51,7 +69,7 @@ $short-sprite-dimensions: true;
 .site_name:hover, .site_name:active{
 	text-decoration:none;
 	color: #949597;
-	font-family: 'CondProBold';
+	font-family: 'PT Sans Normal';
 	text-transform: uppercase;
 }
 
@@ -67,7 +85,7 @@ $short-sprite-dimensions: true;
 	padding: 0px 15px;
 	text-transform: uppercase;
 	border-left: 5px solid #cb272e;
-	font-family: 'CondProBold';
+	font-family: 'PT Sans Normal';
 }
 .info_1{
 	line-height: 24px;
@@ -81,7 +99,7 @@ $short-sprite-dimensions: true;
 .head_phone {
 	font-size: 40px;
 	color: #cb272e;
-	font-family: 'CondProBold';
+	font-family: 'PT Sans Normal';
 	margin-top: 16px;
 	line-height: 42px;
 }
