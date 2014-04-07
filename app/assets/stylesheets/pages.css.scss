@@ -6,6 +6,25 @@
 @font-face {
   font-family: CondProBold;
   src: local("PFDinTextCondPro-Bold"),
+       url(PFDinTextCondPro-Bold.eot),
+       url(PFDinTextCondPro-Bold.otf);
+}
+@font-face {
+  font-family: CondProBoldItal;
+  src: local("PFDinTextCondPro-BoldItal"),
+       url(PFDinTextCondPro-BoldItal.eot),
+       url(PFDinTextCondPro-BoldItal.otf);
+}
+@font-face {
+  font-family: CondProItal;
+  src: local("PFDinTextCondPro-Italic"),
+       url(PFDinTextCondPro-Italic.eot),
+       url(PFDinTextCondPro-Italic.otf);
+}
+
+@font-face {
+  font-family: CondProBold;
+  src: local("PFDinTextCondPro-Bold"),
        url(PFDinTextCondPro-Bold.ttf),
        url(PFDinTextCondPro-Bold.eot),
        url(PFDinTextCondPro-Bold.otf);
