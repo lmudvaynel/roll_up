@@ -43,7 +43,7 @@ $short-sprite-dimensions: true;
 
 .site_name {
 	color: #949597;
-	font-family: CondProBold;
+	font-family: 'CondProBold';
 	text-transform: uppercase;
 	line-height: 50px;
 }
@@ -51,7 +51,7 @@ $short-sprite-dimensions: true;
 .site_name:hover, .site_name:active{
 	text-decoration:none;
 	color: #949597;
-	font-family: CondProBold;
+	font-family: 'CondProBold';
 	text-transform: uppercase;
 }
 
@@ -67,7 +67,7 @@ $short-sprite-dimensions: true;
 	padding: 0px 15px;
 	text-transform: uppercase;
 	border-left: 5px solid #cb272e;
-	font-family: CondProBold;
+	font-family: 'CondProBold';
 }
 .info_1{
 	line-height: 24px;
@@ -81,7 +81,7 @@ $short-sprite-dimensions: true;
 .head_phone {
 	font-size: 40px;
 	color: #cb272e;
-	font-family: CondProBold;
+	font-family: 'CondProBold';
 	margin-top: 16px;
 	line-height: 42px;
 }
